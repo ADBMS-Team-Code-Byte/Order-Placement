@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "e0f86fb9-87a9-454c-94d3-3f1bed5a0281",
+		"name": "Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25125664"
+	},
+	"item": [
+		{
+			"name": "get all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// check if the response status code is 200 (OK)\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// check if the response contains an array of orders\r",
+							"pm.test(\"Response should contain an array of orders\", function () {\r",
+							"    const orders = pm.response.json();\r",
+							"    pm.expect(orders).to.be.an('array');\r",
+							"    pm.expect(orders.length).to.be.above(0); // check if there is atleast one order\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/orders/get/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"orders",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// check if the response status code is 200 (OK)\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// check if the response contains a message property\r",
+							"pm.test(\"Response should have a 'message' property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('message');\r",
+							"});\r",
+							"\r",
+							"// check if the response contains an order property\r",
+							"pm.test(\"Response should have an 'order' property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('order');\r",
+							"});\r",
+							"\r",
+							"// check if the 'order' object has the required fields\r",
+							"pm.test(\"Order object should have required fields\", function () {\r",
+							"    const order = pm.response.json().order;\r",
+							"    pm.expect(order).to.have.property('customerId');\r",
+							"    pm.expect(order).to.have.property('shippingAddress');\r",
+							"    pm.expect(order).to.have.property('products');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/orders/get/64fb0ad51241a6a04b9765e2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"orders",
+						"get",
+						"64fb0ad51241a6a04b9765e2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// check if the response status code is 201 (Created)\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// check if the response contains a message property\r",
+							"pm.test(\"Response should have a 'message' property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('message');\r",
+							"});\r",
+							"\r",
+							"// check if the response contains an order property\r",
+							"pm.test(\"Response should have an 'order' property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('order');\r",
+							"});\r",
+							"\r",
+							"// check if the order object has the required fields\r",
+							"pm.test(\"Order object should have required fields\", function () {\r",
+							"    const order = pm.response.json().order;\r",
+							"    pm.expect(order).to.have.property('customerId');\r",
+							"    pm.expect(order).to.have.property('shippingAddress');\r",
+							"    pm.expect(order).to.have.property('products');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\":18,\r\n    \"shippingAddress\":\"Afganistan\",\r\n    \"products\":[\r\n    {\r\n    \"productId\":9,\r\n    \"quantity\":3\r\n    },\r\n    {\r\n    \"productId\":11,\r\n    \"quantity\":2\r\n    }\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/orders/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"orders",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// check if the response status code is 200 (OK)\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// check if the response contains a message property\r",
+							"pm.test(\"Response should have a 'message' property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('message');\r",
+							"});\r",
+							"\r",
+							"// check if the response contains an order property\r",
+							"pm.test(\"Response should have an 'order' property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('order');\r",
+							"});\r",
+							"\r",
+							"// check if the order object has the required fields\r",
+							"pm.test(\"Order object should have required fields\", function () {\r",
+							"    const order = pm.response.json().order;\r",
+							"    pm.expect(order).to.have.property('customerId');\r",
+							"    pm.expect(order).to.have.property('shippingAddress');\r",
+							"    pm.expect(order).to.have.property('products');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\":\"64fb0bbf1241a6a04b976610\",\r\n    \"shippingAddress\":\"Texas,USA\",\r\n    \"products\":[\r\n    {\r\n    \"productId\":9,\r\n    \"quantity\":30\r\n    }\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/orders/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"orders",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update order status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// check if the response status code is 200 (OK)\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// check if the response contains a message property\r",
+							"pm.test(\"Response should have a 'message' property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('message');\r",
+							"});\r",
+							"\r",
+							"// check if the response contains an order property\r",
+							"pm.test(\"Response should have an 'order' property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('order');\r",
+							"});\r",
+							"\r",
+							"// check if the order object has the required fields\r",
+							"pm.test(\"Order object should have required fields\", function () {\r",
+							"    const order = pm.response.json().order;\r",
+							"    pm.expect(order).to.have.property('customerId');\r",
+							"    pm.expect(order).to.have.property('shippingAddress');\r",
+							"    pm.expect(order).to.have.property('products');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\":\"64fb0be21241a6a04b976619\",\r\n    \"orderStatus\":\"Shipped\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/orders/update/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"orders",
+						"update",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// check if the response status code is 200 (OK)\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// check if the response contains a message property\r",
+							"pm.test(\"Response should have a 'message' property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('message');\r",
+							"});\r",
+							"\r",
+							"// Check if the message property in the response indicates successful cancellation\r",
+							"pm.test(\"Message should indicate successful cancellation\", function () {\r",
+							"    const message = pm.response.json().message;\r",
+							"    pm.expect(message).to.include('cancelled successfully');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\":\"64fb0d3a1241a6a04b97664f\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/orders/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"orders",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// check if the response status code is 200 (OK)\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// check if the response contains a message property\r",
+							"pm.test(\"Response should have a 'message' property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('message');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\":\"64fb0d261241a6a04b97664b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/orders/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"orders",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check user orders",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// check if the response status code is 200 (OK)\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// check if the response contains a hasCurrentOrders property\r",
+							"pm.test(\"Response should have a 'hasCurrentOrders' property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('hasCurrentOrders');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\":6,\r\n    \"shippingAddress\":\"cololmbo,sri lanka\",\r\n    \"products\":[\r\n    {\r\n    \"productId\":7,\r\n    \"quantity\":100\r\n    },\r\n    {\r\n    \"productId\":6,\r\n    \"quantity\":100\r\n    }\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/orders/check/user/18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"orders",
+						"check",
+						"user",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check product orders",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// check if the response status code is 200 (OK)\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// check if the response contains a hasCurrentOrders property\r",
+							"pm.test(\"Response should have a 'hasCurrentOrders' property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('hasCurrentOrders');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\":6,\r\n    \"shippingAddress\":\"cololmbo,sri lanka\",\r\n    \"products\":[\r\n    {\r\n    \"productId\":7,\r\n    \"quantity\":100\r\n    },\r\n    {\r\n    \"productId\":6,\r\n    \"quantity\":100\r\n    }\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/orders/check/product/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"orders",
+						"check",
+						"product",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
