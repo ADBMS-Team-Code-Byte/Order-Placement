@@ -47,7 +47,63 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "get all",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/orders/get/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								"get",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1576"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"628-rfLkr9N5AfdyMJzuHwamQ4zQ82Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:10:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"64fb0ad51241a6a04b9765e2\",\n        \"customerId\": 18,\n        \"shippingAddress\": \"colombo,sri lanka\",\n        \"products\": [\n            {\n                \"productId\": 9,\n                \"quantity\": 10,\n                \"_id\": \"64fb0b751241a6a04b976608\"\n            },\n            {\n                \"productId\": 11,\n                \"quantity\": 20,\n                \"_id\": \"64fb0b751241a6a04b976609\"\n            }\n        ],\n        \"orderStatus\": \"Pending\",\n        \"totalAmount\": 400000,\n        \"orderDate\": \"2023-09-08T11:51:49.972Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"64fb0bbf1241a6a04b976610\",\n        \"customerId\": 18,\n        \"shippingAddress\": \"london,Uk\",\n        \"products\": [\n            {\n                \"productId\": 9,\n                \"quantity\": 1,\n                \"_id\": \"64fb0bbf1241a6a04b976611\"\n            },\n            {\n                \"productId\": 11,\n                \"quantity\": 3,\n                \"_id\": \"64fb0bbf1241a6a04b976612\"\n            }\n        ],\n        \"orderStatus\": \"Pending\",\n        \"totalAmount\": 50000,\n        \"orderDate\": \"2023-09-08T11:55:43.628Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"64fb0be21241a6a04b976619\",\n        \"customerId\": 18,\n        \"shippingAddress\": \"south Korea\",\n        \"products\": [\n            {\n                \"productId\": 9,\n                \"quantity\": 12,\n                \"_id\": \"64fb0be21241a6a04b97661a\"\n            },\n            {\n                \"productId\": 11,\n                \"quantity\": 5,\n                \"_id\": \"64fb0be21241a6a04b97661b\"\n            }\n        ],\n        \"orderStatus\": \"Pending\",\n        \"totalAmount\": 290000,\n        \"orderDate\": \"2023-09-08T11:56:18.967Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"64fb0d261241a6a04b97664b\",\n        \"customerId\": 18,\n        \"shippingAddress\": \"mumbai,India\",\n        \"products\": [\n            {\n                \"productId\": 9,\n                \"quantity\": 1,\n                \"_id\": \"64fb0d261241a6a04b97664c\"\n            },\n            {\n                \"productId\": 11,\n                \"quantity\": 1,\n                \"_id\": \"64fb0d261241a6a04b97664d\"\n            }\n        ],\n        \"orderStatus\": \"Pending\",\n        \"totalAmount\": 30000,\n        \"orderDate\": \"2023-09-08T12:01:42.362Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"64fb0d3a1241a6a04b97664f\",\n        \"customerId\": 18,\n        \"shippingAddress\": \"Karachi,Pakistan\",\n        \"products\": [\n            {\n                \"productId\": 9,\n                \"quantity\": 2,\n                \"_id\": \"64fb0d3a1241a6a04b976650\"\n            },\n            {\n                \"productId\": 11,\n                \"quantity\": 1,\n                \"_id\": \"64fb0d3a1241a6a04b976651\"\n            }\n        ],\n        \"orderStatus\": \"Pending\",\n        \"totalAmount\": 50000,\n        \"orderDate\": \"2023-09-08T12:02:02.260Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "get",
@@ -101,7 +157,63 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/orders/get/64fb0ad51241a6a04b9765e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								"get",
+								"64fb0ad51241a6a04b9765e2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "376"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"178-QvxyQ1oE3w0Zrs+p1wFoTwhSKUE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:11:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order Info Retrieved successfully\",\n    \"order\": {\n        \"_id\": \"64fb0ad51241a6a04b9765e2\",\n        \"customerId\": 18,\n        \"shippingAddress\": \"colombo,sri lanka\",\n        \"products\": [\n            {\n                \"productId\": 9,\n                \"quantity\": 10,\n                \"_id\": \"64fb0b751241a6a04b976608\"\n            },\n            {\n                \"productId\": 11,\n                \"quantity\": 20,\n                \"_id\": \"64fb0b751241a6a04b976609\"\n            }\n        ],\n        \"orderStatus\": \"Pending\",\n        \"totalAmount\": 400000,\n        \"orderDate\": \"2023-09-08T11:51:49.972Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "create",
@@ -163,7 +275,71 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":18,\r\n    \"shippingAddress\":\"Afganistan\",\r\n    \"products\":[\r\n    {\r\n    \"productId\":9,\r\n    \"quantity\":3\r\n    },\r\n    {\r\n    \"productId\":11,\r\n    \"quantity\":2\r\n    }\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/orders/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "359"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"167-fA5/9ypdL5pimlXw+zqML0hSAKU\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:11:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order created successfully\",\n    \"order\": {\n        \"customerId\": 18,\n        \"shippingAddress\": \"Afganistan\",\n        \"products\": [\n            {\n                \"productId\": 9,\n                \"quantity\": 3,\n                \"_id\": \"6501b4f0ae83d66478c79e34\"\n            },\n            {\n                \"productId\": 11,\n                \"quantity\": 2,\n                \"_id\": \"6501b4f0ae83d66478c79e35\"\n            }\n        ],\n        \"orderStatus\": \"Pending\",\n        \"totalAmount\": 80000,\n        \"_id\": \"6501b4f0ae83d66478c79e33\",\n        \"orderDate\": \"2023-09-13T13:11:12.673Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "update",
@@ -225,7 +401,71 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "update",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"64fb0bbf1241a6a04b976610\",\r\n    \"shippingAddress\":\"Texas,USA\",\r\n    \"products\":[\r\n    {\r\n    \"productId\":9,\r\n    \"quantity\":30\r\n    }\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/orders/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "297"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"129-kkEWKO/gdxbAGjYuZIIYo84Tht8\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:11:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order updated successfully\",\n    \"order\": {\n        \"_id\": \"64fb0bbf1241a6a04b976610\",\n        \"customerId\": 18,\n        \"shippingAddress\": \"Texas,USA\",\n        \"products\": [\n            {\n                \"productId\": 9,\n                \"quantity\": 30,\n                \"_id\": \"6501b4f9ae83d66478c79e3a\"\n            }\n        ],\n        \"orderStatus\": \"Pending\",\n        \"totalAmount\": 600000,\n        \"orderDate\": \"2023-09-08T11:55:43.628Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "update order status",
@@ -288,7 +528,72 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "update order status",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"64fb0be21241a6a04b976619\",\r\n    \"orderStatus\":\"Shipped\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/orders/update/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								"update",
+								"status"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "369"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"171-o3fKrFDz/IGI2Id3beyTNZ0cn/s\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:11:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order status updated successfully\",\n    \"order\": {\n        \"_id\": \"64fb0be21241a6a04b976619\",\n        \"customerId\": 18,\n        \"shippingAddress\": \"south Korea\",\n        \"products\": [\n            {\n                \"productId\": 9,\n                \"quantity\": 12,\n                \"_id\": \"64fb0be21241a6a04b97661a\"\n            },\n            {\n                \"productId\": 11,\n                \"quantity\": 5,\n                \"_id\": \"64fb0be21241a6a04b97661b\"\n            }\n        ],\n        \"orderStatus\": \"Shipped\",\n        \"totalAmount\": 290000,\n        \"orderDate\": \"2023-09-08T11:56:18.967Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "cancel",
@@ -343,7 +648,71 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "cancel",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"64fb0d3a1241a6a04b97664f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/orders/cancel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								"cancel"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-Gg9VOzXKAUaEHsblFbcEbDjjkcs\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:11:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order cancelled successfully\"\n}"
+				}
+			]
 		},
 		{
 			"name": "delete",
@@ -392,7 +761,71 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"64fb0d261241a6a04b97664b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/orders/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								"delete"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-44+JLRWSatTeIeuVYDYOdZPIRuM\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:11:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order deleted successfully\"\n}"
+				}
+			]
 		},
 		{
 			"name": "check user orders",
@@ -446,7 +879,73 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "check user orders",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":6,\r\n    \"shippingAddress\":\"cololmbo,sri lanka\",\r\n    \"products\":[\r\n    {\r\n    \"productId\":7,\r\n    \"quantity\":100\r\n    },\r\n    {\r\n    \"productId\":6,\r\n    \"quantity\":100\r\n    }\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/orders/check/user/18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								"check",
+								"user",
+								"18"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "146"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"92-jlI8ky6kJkwG0vJNm9FSdXzTuWs\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:11:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"hasCurrentOrders\": true,\n    \"orderIds\": [\n        \"64fb0ad51241a6a04b9765e2\",\n        \"64fb0bbf1241a6a04b976610\",\n        \"64fb0be21241a6a04b976619\",\n        \"6501b4f0ae83d66478c79e33\"\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "check product orders",
@@ -500,7 +999,73 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "check product orders",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":6,\r\n    \"shippingAddress\":\"cololmbo,sri lanka\",\r\n    \"products\":[\r\n    {\r\n    \"productId\":7,\r\n    \"quantity\":100\r\n    },\r\n    {\r\n    \"productId\":6,\r\n    \"quantity\":100\r\n    }\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/orders/check/product/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								"check",
+								"product",
+								"11"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5c-e0aS+d5bJBe4P9K3LwVynOZZyzA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:12:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"hasCurrentOrders\": true,\n    \"orderIds\": [\n        \"64fb0ad51241a6a04b9765e2\",\n        \"6501b4f0ae83d66478c79e33\"\n    ]\n}"
+				}
+			]
 		}
 	]
 }
